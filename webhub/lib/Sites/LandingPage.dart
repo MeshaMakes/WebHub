@@ -18,6 +18,37 @@ class _LandingPageState extends State<LandingPage> {
     "Buy",
   ];
 
+  List<Map> _creativeProcess = [
+    {
+      "icon" : Icons.favorite,
+      "title" : "It all starts here"
+    },
+    {
+      "icon" : Icons.lightbulb,
+      "title" : "Ideas are born"
+    },
+    {
+      "icon" : Icons.forum_rounded,
+      "title" : "Plans are made"
+    },
+    {
+      "icon" : Icons.event,
+      "title" : "Tasks are assigned"
+    },
+    {
+      "icon" : Icons.group,
+      "title" : "Team is developing"
+    },
+    {
+      "icon" : Icons.done_rounded,
+      "title" : "Product is done"
+    },
+    {
+      "icon" : Icons.thumb_up,
+      "title" : "Customer is happy"
+    },
+  ];
+
   Size _size;
 
   @override
@@ -34,6 +65,7 @@ class _LandingPageState extends State<LandingPage> {
               _headerImage(),
               _morePanel(),
               _section1(),
+              _section2(),
             ],
           ),
         ),
@@ -274,6 +306,99 @@ class _LandingPageState extends State<LandingPage> {
             colorFilter: Colors.black.withOpacity(0.3,),
             imageKey: "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8ZGV2ZWxvcGVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _section2(){
+    return Container(
+      width: _size.width,
+      margin: EdgeInsets.symmetric(vertical: 50.0,),
+      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: _size.width/10,),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TextView.rich(
+            align: TextAlign.center,
+            textSpan: [
+              TextView(
+                text: "The creative process",
+                size: 40.0,
+                letterSpacing: 0.0,
+                color: Colors.black87,
+                fontWeight: FontWeight.w700,
+                align: TextAlign.center,
+              ),
+              TextView(
+                text: "\nof our team",
+                size: 40.0,
+                letterSpacing: 0.0,
+                color: Colors.black87,
+                fontWeight: FontWeight.w400,
+                align: TextAlign.center,
+              ),
+            ],
+          ),
+          TextView(
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            size: 15.0,
+            letterSpacing: 1.0,
+            color: Colors.black87,
+            fontWeight: FontWeight.w500,
+            padding: EdgeInsets.only(top: 20.0, bottom: 50.0),
+            align: TextAlign.center,
+          ),
+
+          Wrap(
+            direction: Axis.horizontal,
+            alignment: WrapAlignment.spaceEvenly,
+            crossAxisAlignment: WrapCrossAlignment.start,
+            spacing: 10.0, runSpacing: 10.0,
+            children: [
+              for(int i = 0; i < _creativeProcess.length; i++)
+                HoverWidget(
+                  duration: Duration(milliseconds: 500,),
+                  width: _size.width / 13,
+                  idle: ContainerChanges(
+                    padding: EdgeInsets.all(5.0),
+                    margin: EdgeInsets.symmetric(horizontal: 10.0),
+                  ),
+                  onHover: ContainerChanges(
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey.shade200.withOpacity(0.40),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200,
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        child: Icon(_creativeProcess[i]["icon"],
+                          size: 30.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                      TextView(
+                        text: _creativeProcess[i]["title"],
+                        padding: EdgeInsets.symmetric(vertical: 5.0,),
+                        color: Colors.black,
+                        size: 18.0,
+                        fontWeight: FontWeight.w700,
+                        align: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+            ],
+          ),
         ],
       ),
     );
