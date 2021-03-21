@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:webhub/Sites/LandingPage.dart';
 
 void main() {
-  runApp(MaterialApp(home: LandingPage(),),);
+  runApp(MaterialApp(
+    home: LandingPage(),
+  ),);
 }
 
 class MyApp extends StatefulWidget {
@@ -11,8 +13,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
   @override
   Widget build(BuildContext context) {
     return Container();
   }
+
 }

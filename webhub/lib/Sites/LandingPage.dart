@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sad_lib/CustomWidgets.dart';
 
@@ -55,7 +54,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size;
     return Material(
-      color: Colors.white,
+      color: WHITE,
       child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -66,6 +65,7 @@ class _LandingPageState extends State<LandingPage> {
               _morePanel(),
               _section1(),
               _section2(),
+              _section3(),
             ],
           ),
         ),
@@ -76,7 +76,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget _navBar(){
     return Container(
       width: _size.width,
-      color: Colors.white,
+      color: WHITE,
       padding: EdgeInsets.symmetric(vertical: 10.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -86,7 +86,7 @@ class _LandingPageState extends State<LandingPage> {
             size: 40.0,
             letterSpacing: 0.0,
             fontWeight: FontWeight.w700,
-            color: Colors.black87,
+            color: BLACK,
             padding: EdgeInsets.symmetric(horizontal: 50.0),
           ),
           TextView.rich(
@@ -96,14 +96,14 @@ class _LandingPageState extends State<LandingPage> {
                 size: 20.0,
                 letterSpacing: 0.5,
                 fontWeight: FontWeight.w600,
-                color: Colors.black87,
+                color: BLACK,
               ),
               TextView(
                 text: "\nvisualizing your ideas",
                 size: 10.0,
                 letterSpacing: 0.5,
                 fontWeight: FontWeight.w500,
-                color: Colors.grey,
+                color: GREY,
               ),
             ],
           ),
@@ -117,7 +117,7 @@ class _LandingPageState extends State<LandingPage> {
                 size: 17.0,
                 letterSpacing: 0.5,
                 fontWeight: FontWeight.w500,
-                color: i == 0 ? Colors.grey : Colors.black87,
+                color: i == 0 ? GREY : BLACK,
               ),
             ),
           SizedBox(
@@ -163,7 +163,7 @@ class _LandingPageState extends State<LandingPage> {
             size: 15.0,
             letterSpacing: 1.0,
             color: Colors.white,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: _size.width/3,),
           ),
         ],
@@ -174,8 +174,8 @@ class _LandingPageState extends State<LandingPage> {
   Widget _morePanel(){
     return Container(
       width: _size.width,
-      color: Colors.black87,
-      padding: EdgeInsets.symmetric(vertical: 20.0),
+      color: BLACK,
+      padding: EdgeInsets.symmetric(vertical: 20.0,),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -184,11 +184,11 @@ class _LandingPageState extends State<LandingPage> {
             onPressed: (){
 
             },
-            color: Colors.white,
+            color: WHITE,
             borderRadius: 50.0,
             margin: EdgeInsets.all(5.0,),
             child: Image.network("https://img.icons8.com/dotty/2x/facebook-new.png",
-              color: Colors.black87,
+              color: BLACK,
               width: 40.0,
               height: 40.0,
             ),
@@ -197,12 +197,12 @@ class _LandingPageState extends State<LandingPage> {
             onPressed: (){
 
             },
-            color: Colors.white,
+            color: WHITE,
             borderRadius: 50.0,
             margin: EdgeInsets.all(5.0,),
             padding: EdgeInsets.all(5.0,),
             child: Image.network("https://img.icons8.com/dotty/2x/twitter.png",
-              color: Colors.black87,
+              color: BLACK,
               width: 30.0,
               height: 30.0,
             ),
@@ -211,11 +211,11 @@ class _LandingPageState extends State<LandingPage> {
             onPressed: (){
 
             },
-            color: Colors.white,
+            color: WHITE,
             borderRadius: 50.0,
             margin: EdgeInsets.all(5.0,),
             child: Image.network("https://img.icons8.com/dotty/2x/github.png",
-              color: Colors.black87,
+              color: BLACK,
               width: 40.0,
               height: 40.0,
             ),
@@ -227,14 +227,14 @@ class _LandingPageState extends State<LandingPage> {
                 size: 18.0,
                 letterSpacing: 0.5,
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: WHITE,
               ),
               TextView(
-                text: "   DM Studios is what you're looking for!",
+                text: "   DM Studios is who you're looking for!",
                 size: 15.0,
                 letterSpacing: 0.5,
                 fontWeight: FontWeight.w400,
-                color: Colors.white70,
+                color: GREY,
               ),
             ],
             padding: EdgeInsets.symmetric(horizontal: 50.0,),
@@ -243,13 +243,13 @@ class _LandingPageState extends State<LandingPage> {
             onPressed: (){},
             margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 50.0),
             padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-            border: Border.all(color: Colors.white, width: 1.0,),
+            border: Border.all(color: WHITE, width: 1.0,),
             child: TextView(
               text: "More",
               size: 17.0,
               letterSpacing: 0.5,
               fontWeight: FontWeight.w500,
-              color: Colors.white,
+              color: WHITE,
             ),
           ),
         ],
@@ -275,14 +275,14 @@ class _LandingPageState extends State<LandingPage> {
                       text: "We are creators.",
                       size: 40.0,
                       letterSpacing: 0.0,
-                      color: Colors.black87,
+                      color: BLACK,
                       fontWeight: FontWeight.w700,
                     ),
                     TextView(
                       text: "\nLeave the developing to us!",
                       size: 40.0,
                       letterSpacing: 0.0,
-                      color: Colors.black87,
+                      color: BLACK,
                       fontWeight: FontWeight.w400,
                     ),
                   ],
@@ -292,7 +292,7 @@ class _LandingPageState extends State<LandingPage> {
                       "\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   size: 15.0,
                   letterSpacing: 1.0,
-                  color: Colors.black87,
+                  color: BLACK,
                   fontWeight: FontWeight.w500,
                   padding: EdgeInsets.symmetric(vertical: 20.0,),
                 ),
@@ -326,7 +326,7 @@ class _LandingPageState extends State<LandingPage> {
                 text: "The creative process",
                 size: 40.0,
                 letterSpacing: 0.0,
-                color: Colors.black87,
+                color: BLACK,
                 fontWeight: FontWeight.w700,
                 align: TextAlign.center,
               ),
@@ -334,7 +334,7 @@ class _LandingPageState extends State<LandingPage> {
                 text: "\nof our team",
                 size: 40.0,
                 letterSpacing: 0.0,
-                color: Colors.black87,
+                color: BLACK,
                 fontWeight: FontWeight.w400,
                 align: TextAlign.center,
               ),
@@ -344,7 +344,7 @@ class _LandingPageState extends State<LandingPage> {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             size: 15.0,
             letterSpacing: 1.0,
-            color: Colors.black87,
+            color: BLACK,
             fontWeight: FontWeight.w500,
             padding: EdgeInsets.only(top: 20.0, bottom: 50.0),
             align: TextAlign.center,
@@ -383,15 +383,15 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                         child: Icon(_creativeProcess[i]["icon"],
                           size: 30.0,
-                          color: Colors.black,
+                          color: BLACK,
                         ),
                       ),
                       TextView(
                         text: _creativeProcess[i]["title"],
                         padding: EdgeInsets.symmetric(vertical: 5.0,),
-                        color: Colors.black,
-                        size: 18.0,
-                        fontWeight: FontWeight.w700,
+                        color: BLACK,
+                        size: 12.0,
+                        fontWeight: FontWeight.w600,
                         align: TextAlign.center,
                       ),
                     ],
@@ -404,4 +404,80 @@ class _LandingPageState extends State<LandingPage> {
     );
   }
 
+  Widget _section3(){
+    return Container(
+      width: _size.width,
+      color: BLACK,
+      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: (_size.width/4)-40,),
+      child: CustomCarousel.builder(
+        aspectRatio: 2.0,
+        childrenLength: 2,
+        childrenBuilder: (context, index, isCurrent, previous, next){
+          return Row(
+            children: [
+              ButtonView(
+                onPressed: previous,
+                child: Icon(Icons.arrow_back_ios_outlined,
+                  size: 30.0,
+                  color: WHITE,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(right: 20.0,),
+                  padding: EdgeInsets.symmetric(horizontal: 20.0,),
+                  decoration: BoxDecoration(
+                    border: Border(right: BorderSide(color: Colors.white70, width: 1.0,),),
+                  ),
+                  child: TextView.rich(
+                    textSpan: [
+                      TextView(text: "Mesha Thomas",
+                        size: 35.0,
+                        letterSpacing: 0.0,
+                        color: WHITE,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      TextView(text: "\nDeveloper  |  UI Designer",
+                        size: 20.0,
+                        letterSpacing: 0.0,
+                        color: WHITE,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      TextView(text: "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n",
+                        size: 15.0,
+                        letterSpacing: 0.0,
+                        color: WHITE,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ],
+                    isSelectable: true,
+                    align: TextAlign.end,
+                  ),
+                ),
+              ),
+              ClipOval(
+                child: ImageView.network(imageKey: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  height: _size.width/5.0,
+                  width: _size.width/5.0,
+                ),
+              ),
+              ButtonView(
+                onPressed: next,
+                child: Icon(Icons.arrow_forward_ios_outlined,
+                  size: 30.0,
+                  color: WHITE,
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
 }
+
+
+Color WHITE = Colors.white;
+Color BLACK = Colors.black87;
+Color GREY = Colors.grey;
