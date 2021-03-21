@@ -27,6 +27,7 @@ dependencies:
     git:
       url: git://github.com/ArcherDiaz/SAD.git
       path: sad_lib/
+  google_fonts: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
