@@ -259,8 +259,17 @@ class _LandingPage2State extends State<LandingPage2> {
                           Container(
                             width: _size.width/4,
                             height: _size.width/2,
-                            color: LIGHTGREY,
                             padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0,),
+                            decoration: BoxDecoration(
+                              color: LIGHTGREY,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: Offset(7.5, 7.5,),
+                                  color: Colors.black.withOpacity(0.5,),
+                                  blurRadius: 20.0,
+                                ),
+                              ],
+                            ),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -313,6 +322,7 @@ class _LandingPage2State extends State<LandingPage2> {
                       children: [
                         ButtonView(
                           onPressed: previous,
+                          margin: EdgeInsets.symmetric(vertical:10.0, horizontal: 20.0,),
                           child: Icon(Icons.arrow_back_outlined,
                             size: 20.0,
                             color: ORANGE,
@@ -320,6 +330,7 @@ class _LandingPage2State extends State<LandingPage2> {
                         ),
                         ButtonView(
                           onPressed: next,
+                          margin: EdgeInsets.symmetric(vertical:10.0, horizontal: 20.0,),
                           child: Icon(Icons.arrow_forward_outlined,
                             size: 20.0,
                             color: ORANGE,
