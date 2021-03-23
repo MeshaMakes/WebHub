@@ -4,6 +4,7 @@ import 'package:webhub/Sites/LandingPage2.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: LandingPage2(),
   ),);
 }
