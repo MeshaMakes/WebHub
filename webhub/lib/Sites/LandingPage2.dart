@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sad_lib/CustomWidgets.dart';
 
 class LandingPage2 extends StatefulWidget {
@@ -40,6 +39,12 @@ class _LandingPage2State extends State<LandingPage2> {
     "https://image.flaticon.com/icons/png/128/1384/1384031.png",
     "https://image.flaticon.com/icons/png/128/1051/1051377.png",
     "https://image.flaticon.com/icons/png/128/2111/2111819.png",
+  ];
+
+  List<String> _sculptures = [
+    "https://images.unsplash.com/photo-1614496341624-7c0ad7321034?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGdyZWVrJTIwc2N1bHB0dXJlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1549887552-cb1071d3e5ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Z3JlZWslMjBzY3VscHR1cmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1549887534-1541e9326642?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Z3JlZWslMjBzY3VscHR1cmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   ];
 
   Size _size;
@@ -121,13 +126,13 @@ class _LandingPage2State extends State<LandingPage2> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextView(text: "September 26, 2016 - Bus Excursion",
+                      TextView(text: "March 16, 2021 - Artistic Masterpiece",
                         color: Colors.white,
                         size: 12.5,
                         letterSpacing: 2.0,
                         fontWeight: FontWeight.w300,
                       ),
-                      TextView(text: "Explore Old Architecture",
+                      TextView(text: "Explore Ancient Architecture",
                         padding: EdgeInsets.symmetric(vertical: 20.0,),
                         color: Colors.white,
                         size: 45.0,
@@ -239,9 +244,9 @@ class _LandingPage2State extends State<LandingPage2> {
             childrenLength: 3,
             childrenBuilder: (context, index, isCurrent, previous, next){
               if(isCurrent == false){
-                return ImageView.network(imageKey: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                return ImageView.network(imageKey: _sculptures[index],
                   width: _size.width/8,
-                  height: _size.width/4,
+                  height: _size.width/8,
                 );
               }else{
                 return Column(
@@ -252,7 +257,7 @@ class _LandingPage2State extends State<LandingPage2> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          ImageView.network(imageKey: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                          ImageView.network(imageKey: _sculptures[index],
                             width: _size.width/4,
                             height: _size.width/4,
                           ),
