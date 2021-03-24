@@ -32,6 +32,7 @@ class _LandingPage3State extends State<LandingPage3> {
               _section1(),
               _section2(),
               _section3(),
+              _section4(),
             ],
           ),
         ),
@@ -222,6 +223,74 @@ class _LandingPage3State extends State<LandingPage3> {
                   ),
                 ],
               ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _section4(){
+    return Container(
+      width: _size.width,
+      padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: _size.width/8,),
+      child: Wrap(
+        direction: Axis.horizontal,
+        alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.start,
+        spacing: 10.0, runSpacing: 20.0,
+        children: [
+          for(int i = 0; i < 2; i++)
+            ImageView.network(imageKey: "https://images.unsplash.com/photo-1503332132010-d1b77a049ddd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hlc3MlMjBib2FyZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              width: _size.width/3,
+              height: _size.width/6,
+            ),
+
+            Container(
+              width: _size.width/3,
+              height: _size.width/6,
+              padding: EdgeInsets.all(10.0,),
+              decoration: BoxDecoration(
+                border: Border.all(color: ORANGE, width: 7.5,),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextView(text: "Our Latest Projects",
+                    color: BLACK,
+                    size: 30.0,
+                    letterSpacing: 0.5,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  Expanded(
+                    child: TextView(text: _filler,
+                      padding: EdgeInsets.symmetric(vertical: 20.0,),
+                      color: BLACK,
+                      size: 12.5,
+                      lineSpacing: 2.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  ButtonView(
+                    onPressed: (){
+
+                    },
+                    color: BLACK,
+                    borderRadius: 0.0,
+                    padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0,),
+                    child: TextView(text: "read more",
+                      color: WHITE,
+                      size: 15.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+          for(int i = 0; i < 2; i++)
+            ImageView.network(imageKey: "https://images.unsplash.com/photo-1614605008553-d98daabfa5b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoZXNzJTIwYm9hcmR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              width: _size.width/6,
+              height: _size.width/6,
             ),
         ],
       ),
