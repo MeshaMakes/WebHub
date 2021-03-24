@@ -51,6 +51,21 @@ class _LandingPageState extends State<LandingPage> {
     },
   ];
 
+  List<Map> _people = [
+    {
+      "image URL": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Mesha Thomas",
+      "title": "Developer  |  Visual Designer  |  Programmer",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "image URL": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Cesar Diaz",
+      "title": "Developer  |  Programmer  |  Technical Engineer",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+  ];
+
   Size _size;
 
   @override
@@ -433,19 +448,19 @@ class _LandingPageState extends State<LandingPage> {
                   ),
                   child: TextView.rich(
                     textSpan: [
-                      TextView(text: "Mesha Thomas",
+                      TextView(text: _people[index]["name"],
                         size: 35.0,
                         letterSpacing: 0.0,
                         color: WHITE,
                         fontWeight: FontWeight.w600,
                       ),
-                      TextView(text: "\nDeveloper  |  UI Designer",
+                      TextView(text: "\n${_people[index]["title"]}",
                         size: 20.0,
                         letterSpacing: 0.0,
                         color: WHITE,
                         fontWeight: FontWeight.w400,
                       ),
-                      TextView(text: "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n",
+                      TextView(text: "\n\n${_people[index]["info"]}\n",
                         size: 15.0,
                         letterSpacing: 0.0,
                         color: WHITE,
@@ -458,7 +473,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ),
               ClipOval(
-                child: ImageView.network(imageKey: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZGluZyUyMHBhZ2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                child: ImageView.network(imageKey: _people[index]["image URL"],
                   height: _size.width/5.0,
                   width: _size.width/5.0,
                 ),
