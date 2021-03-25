@@ -53,7 +53,7 @@ class _LandingPage2State extends State<LandingPage2> {
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size;
     return Material(
-      color: BLACK,
+      color: DARKGREY,
       child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -392,7 +392,8 @@ class _LandingPage2State extends State<LandingPage2> {
 
 
 Color WHITE = Colors.white;
-Color BLACK = Color.fromRGBO(30, 30, 30, 1.0,);
+Color BLACK = Colors.black;
+Color DARKGREY = Color.fromRGBO(30, 30, 30, 1.0,);
 Color GREY = Colors.grey;
 Color LIGHTGREY = Color.fromRGBO(45, 45, 45, 1.0,);
 

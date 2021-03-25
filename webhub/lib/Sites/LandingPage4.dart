@@ -109,7 +109,7 @@ class _LandingPage4State extends State<LandingPage4> {
                 text: _navButtons[i],
                 size: 12.5,
                 letterSpacing: 0.5,
-                color: i == 0 ? GREEN : BLACK,
+                color: i == 0 ? GREEN : DARKGREY,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -122,10 +122,10 @@ class _LandingPage4State extends State<LandingPage4> {
             margin: EdgeInsets.symmetric(horizontal: 15.0,),
             padding: EdgeInsets.all(5.0,),
             borderRadius: 90.0,
-            border: Border.all(color: BLACK, width: 1.5,),
+            border: Border.all(color: DARKGREY, width: 1.5,),
             child: Icon(Icons.search_outlined,
               size: 20.0,
-              color: BLACK,
+              color: DARKGREY,
             ),
           ),
         ],
@@ -328,14 +328,14 @@ class _LandingPage4State extends State<LandingPage4> {
           TextView(text: "SPECIAL OFFERS",
             size: 25.0,
             align: TextAlign.center,
-            color: BLACK,
+            color: DARKGREY,
             fontWeight: FontWeight.w700,
           ),
           TextView(text: "premium vacations where everyone wants to stay!",
             padding: EdgeInsets.only(top: 10.0, bottom: 30.0,),
             size: 12.5,
             align: TextAlign.center,
-            color: BLACK,
+            color: DARKGREY,
             fontWeight: FontWeight.w400,
           ),
           SingleChildScrollView(
@@ -378,12 +378,12 @@ class _LandingPage4State extends State<LandingPage4> {
                                     textSpan: [
                                       TextView(text: _holidayType[i]["title"],
                                         size: 15.0,
-                                        color: isHovering == true ? WHITE : BLACK,
+                                        color: isHovering == true ? WHITE : DARKGREY,
                                         fontWeight: FontWeight.w500,
                                       ),
                                       TextView(text: "\n${_holidayType[i]["title"]}",
                                         size: 12.0,
-                                        color: isHovering == true ? GREY : BLACK,
+                                        color: isHovering == true ? GREY : DARKGREY,
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ],
@@ -392,7 +392,7 @@ class _LandingPage4State extends State<LandingPage4> {
                                 ),
                                 Icon(Icons.keyboard_arrow_down_outlined,
                                   size: 25.0,
-                                  color: isHovering == true ? WHITE : BLACK,
+                                  color: isHovering == true ? WHITE : DARKGREY,
                                 ),
                               ],
                             ),
@@ -487,8 +487,9 @@ class _LandingPage4State extends State<LandingPage4> {
 
 
 Color WHITE = Colors.white;
+Color BLACK = Colors.black;
 Color GREY = Color.fromRGBO(175, 175, 175, 1.0,);
-Color BLACK = Color.fromRGBO(30, 30, 30, 1.0,);
+Color DARKGREY = Color.fromRGBO(20, 20, 20, 1.0,);
 
 Color GREEN = Color.fromRGBO(0, 150, 120, 1.0,);
 Color BLUE = Color.fromRGBO(10, 50, 90, 1.0,);

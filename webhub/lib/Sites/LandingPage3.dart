@@ -137,7 +137,7 @@ class _LandingPage3State extends State<LandingPage3> {
                   border: Border.all(color: ORANGE, width: 7.5,),
                 ),
                 child: TextView(text: "About Our Designers",
-                  color: BLACK,
+                  color: DARKGREY,
                   size: 30.0,
                   letterSpacing: 0.5,
                   fontWeight: FontWeight.w500,
@@ -152,7 +152,7 @@ class _LandingPage3State extends State<LandingPage3> {
               Expanded(
                 child: TextView(text: "$_filler $_filler",
                   padding: EdgeInsets.symmetric(vertical: 20.0,),
-                  color: BLACK,
+                  color: DARKGREY,
                   size: 15.0,
                   fontWeight: FontWeight.w500,
                 ),
@@ -161,7 +161,7 @@ class _LandingPage3State extends State<LandingPage3> {
                 onPressed: (){
 
                 },
-                color: BLACK,
+                color: DARKGREY,
                 borderRadius: 0.0,
                 margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0,),
                 padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0,),
@@ -256,7 +256,7 @@ class _LandingPage3State extends State<LandingPage3> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextView(text: "Our Latest Projects",
-                    color: BLACK,
+                    color: DARKGREY,
                     size: 30.0,
                     letterSpacing: 0.5,
                     fontWeight: FontWeight.w500,
@@ -264,7 +264,7 @@ class _LandingPage3State extends State<LandingPage3> {
                   Expanded(
                     child: TextView(text: _filler,
                       padding: EdgeInsets.symmetric(vertical: 20.0,),
-                      color: BLACK,
+                      color: DARKGREY,
                       size: 12.5,
                       lineSpacing: 2.0,
                       fontWeight: FontWeight.w400,
@@ -274,7 +274,7 @@ class _LandingPage3State extends State<LandingPage3> {
                     onPressed: (){
 
                     },
-                    color: BLACK,
+                    color: DARKGREY,
                     borderRadius: 0.0,
                     padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0,),
                     child: TextView(text: "read more",
@@ -301,7 +301,8 @@ class _LandingPage3State extends State<LandingPage3> {
 
 
 Color WHITE = Colors.white;
-Color BLACK = Color.fromRGBO(30, 30, 30, 1.0,);
+Color BLACK = Colors.black;
+Color DARKGREY = Color.fromRGBO(20, 20, 20, 1.0,);
 
 Color DARKBLUE = Color.fromRGBO(20, 20, 40, 1.0,);
 Color ORANGE = Colors.deepOrange;
