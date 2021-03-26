@@ -1,5 +1,8 @@
+import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sad_lib/CustomWidgets.dart';
+import 'package:webhub/Utils/GifWidget.dart';
 
 class LandingPage5 extends StatefulWidget {
   @override
@@ -18,15 +21,33 @@ class _LandingPage5State extends State<LandingPage5> {
   ];
 
   List<String> _images = [
-    "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dnJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "",
     "https://images.unsplash.com/photo-1493496553793-56c1aa2cfcea?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXwzNDU5MDIyfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "https://images.unsplash.com/photo-1506031765313-0bc574a405f0?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTR8NDM2NDIzOXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1613325436249-c90b7a608248?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHZpcnR1YWwlMjByZWFsaXR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "",
     "https://images.unsplash.com/photo-1613325436307-5489b00ba07a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fHZpcnR1YWwlMjByZWFsaXR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "",
   ];
 
+  double _left;
+
   Size _size;
+
+  @override
+  void initState() {
+    _left = 0;
+    super.initState();
+    Timer.periodic(Duration(milliseconds: 50,), (timer) {
+      setState(() {
+        _left = _left + 2.5;
+      });
+      if(_left >= _size.width*1.5){
+        setState(() {
+          _left = 0;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +60,13 @@ class _LandingPage5State extends State<LandingPage5> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _header(),
+              _run(),
+              SizedBox(height: 50.0,),
+              _section2(),
+              SizedBox(height: 50.0,),
+              _section3(),
+              SizedBox(height: 50.0,),
+              _section4(),
             ],
           ),
         ),
@@ -104,7 +132,7 @@ class _LandingPage5State extends State<LandingPage5> {
   }
 
   Widget _header(){
-    return ImageView.network(imageKey: _images[0],
+    return ImageView.network(imageKey: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dnJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       width: _size.width,
       aspectRatio: 2.5,
       colorFilter: PINK.withOpacity(0.3,),
@@ -143,7 +171,104 @@ class _LandingPage5State extends State<LandingPage5> {
     );
   }
 
+  Widget _run(){
+    return GifWidget(
+      speed: 2.5,
+      maxConstraints: Size(_size.width, 30.0,),
+      child: Image.network("https://thumbs.gfycat.com/LimpOblongFanworms-small.gif",
+        width: 30,
+        color: WHITE,
+      ),
+    );
+  }
+
+  Widget _section2(){
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Image.network("https://image.flaticon.com/icons/png/128/2991/2991606.png",
+          width: 30.0,
+          height: 30.0,
+        ),
+        TextView(text: "Available Games",
+          padding: EdgeInsets.only(top: 10.0, bottom: 30.0,),
+          size: 17.5,
+          color: BLUE,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.w500,
+        ),
+      ],
+    );
+  }
+
+  Widget _section3(){
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Image.network("https://image.flaticon.com/icons/png/128/2177/2177275.png",
+          width: 30.0,
+          height: 30.0,
+        ),
+        TextView(text: "Our Gear",
+          padding: EdgeInsets.only(top: 10.0, bottom: 30.0,),
+          size: 17.5,
+          color: BLUE,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.w500,
+        ),
+      ],
+    );
+  }
+
+  Widget _section4(){
+    return ImageView.network(imageKey: "https://images.unsplash.com/photo-1613325436249-c90b7a608248?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHZpcnR1YWwlMjByZWFsaXR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      width: _size.width,
+      aspectRatio: 3.5,
+      colorFilter: PURPLE.withOpacity(0.5,),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.network("https://image.flaticon.com/icons/png/128/908/908304.png",
+            width: 50.0,
+            height: 50.0,
+            color: WHITE,
+          ),
+          TextView.rich(
+            textSpan: [
+              TextView(text: "LIGHTING - ATMOSPHERE - GEAR\n",
+                size: 17.5,
+                color: WHITE,
+                letterSpacing: 1.25,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w600,
+              ),
+              TextView(text: "IMMERSIVE EXPERIENCE\n",
+                size: 40.0,
+                color: WHITE,
+                letterSpacing: 0.0,
+                fontWeight: FontWeight.w500,
+              ),
+              TextView(text: "\n$_filler",
+                size: 15.0,
+                color: WHITE,
+                fontWeight: FontWeight.w400,
+              ),
+            ],
+            align: TextAlign.center,
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: _size.width/4,),
+          ),
+        ],
+      ),
+    );
+  }
+
 }
+
+//flutter build web --release --web-renderer html
+//flutter run -d chrome --web-renderer html
 
 
 Color WHITE = Colors.white;
