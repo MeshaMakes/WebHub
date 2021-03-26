@@ -267,9 +267,6 @@ class _LandingPage5State extends State<LandingPage5> {
 
 }
 
-//flutter build web --release --web-renderer html
-//flutter run -d chrome --web-renderer html
-
 
 Color WHITE = Colors.white;
 Color BLACK = Colors.black;
