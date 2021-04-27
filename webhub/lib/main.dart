@@ -9,6 +9,6 @@ import 'package:webhub/Sites/LandingPage5.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: BlogSite(),
+    home: LandingPage5(),
   ),);
 }

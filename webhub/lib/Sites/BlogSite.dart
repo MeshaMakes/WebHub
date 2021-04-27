@@ -274,7 +274,7 @@ class _BlogSiteState extends State<BlogSite> {
     return Container(
       width: _size.width,
       padding: EdgeInsets.symmetric(vertical: 120.0,),
-      color: Colors.grey.shade300,
+      color: Colors.grey.shade200,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
